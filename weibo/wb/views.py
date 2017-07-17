@@ -8,6 +8,5 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_weibo_list'
 
     def get_queryset(self):
-        """ return the last five pinlished questions """
-        # return Question.objects.order_by('-pub_date')[:10]
+        """ return """
         return []
