@@ -1,0 +1,8 @@
+#忽略编译文件夹
+__pycache__
+
+#忽略编译文件pyc
+*.pyc
+
+#忽略migrations
+migrations
