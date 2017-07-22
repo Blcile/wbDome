@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from django.http import response
-from django.views import generic
+from django.views.generic.list import ListView
+from .models import Wblog,WbImg
 
 # Create your views here.
-class IndexView(generic.ListView):
+class IndexView(ListView):
     template_name = 'index.html'
-    context_object_name = 'latest_weibo_list'
+    context_object_name = 'weibo_list'
 
     def get_queryset(self):
-        """ return """
-        return []
+        weibo_list = Wblog.objects.all()
+        return weibo_list
+
+
+

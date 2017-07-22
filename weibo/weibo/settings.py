@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'wb',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'wb',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # show sql
+    'wb.middleware.ShowSQLMiddleware',
 ]
 
 ROOT_URLCONF = 'weibo.urls'
@@ -84,8 +86,8 @@ DATABASES = {
         'NAME': 'weibo',
         'PASSWORD': 'root',
         'USER': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
+        'HOST': '',
+        'PORT': ''
     }
 }
 

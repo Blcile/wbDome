@@ -1,1 +1,18 @@
-hello weibo
+<div>
+    填写内容的东西
+</div>
+<div>
+    {% for weibo in weibo_list %}
+    <div>
+        {% weibo.user.username %}:<br/>
+        <div>
+            {% weibo.context %}
+        </div>
+        <div>
+            <span>{% weibo.time | timesince  %}</span>
+            <span>评论</span>
+            <span>赞{% weibo.goods %}</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
