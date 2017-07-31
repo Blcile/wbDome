@@ -10,7 +10,7 @@ class IndexView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['wb_list'] = Wblog.objects.all()[:10]
+        context['wb_list'] = Wblog.objects.all()[:5]
         return context
 
 
